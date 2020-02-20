@@ -1,0 +1,8 @@
+version: '3'
+services:
+  azkaban:
+    image: "initiator:latest"
+    environment:
+      - conf.local.rest.service.host=http://host.docker.internal:8080
+    ports:
+      - 8082:8082
