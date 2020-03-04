@@ -4,5 +4,7 @@ services:
     image: "initiator:latest"
     environment:
       - conf.local.rest.service.host=http://host.docker.internal:8080
+      - COMPOSE_HTTP_TIMEOUT=500
+      - DOCKER_TLS_VERIFY=1
     ports:
       - 8082:8082
